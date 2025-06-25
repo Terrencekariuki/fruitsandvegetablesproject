@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fruits & Vegetables Order</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <h1>Fruits & Vegetables - Order Page</h1>
+  </header>
+
+  <main class="order-container">
+    <h2>Select Products</h2>
+    <form class="product-list">
+
+      <!-- Example Entry -->
+      <div class="product">
+        <label>Carrots (100 sh/kg)</label>
+        <input type="number" name="carrots" placeholder="Enter kg" min="0" />
+        <span>Subtotal: ____</span>
+      </div>
+
+      <div class="product">
+        <label>Mangoes (200 sh/kg)</label>
+        <input type="number" name="mangoes" placeholder="Enter kg" min="0" />
+        <span>Subtotal: ____</span>
+      </div>
+
+      <div class="product">
+        <label>Cucumbers (70 sh/kg)</label>
+        <input type="number" name="cucumbers" placeholder="Enter kg" min="0" />
+        <span>Subtotal: ____</span>
+      </div>
+
+      <div class="product">
+        <label>Pumpkins (150 sh/piece)</label>
+        <input type="number" name="pumpkins" placeholder="Enter pieces" min="0" />
+        <span>Subtotal: ____</span>
+      </div>
+
+      <div class="product">
+        <label>Oranges (140 sh/kg)</label>
+        <input type="number" name="oranges" placeholder="Enter kg" min="0" />
+        <span>Subtotal: ____</span>
+      </div>
+
+      <div class="product">
+        <label>Kiwis (500 sh/kg)</label>
+        <input type="number" name="kiwis" placeholder="Enter kg" min="0" />
+        <span>Subtotal: ____</span>
+      </div>
+
+      <div class="product">
+        <label>Lemons (100 sh/kg)</label>
+        <input type="number" name="lemons" placeholder="Enter kg" min="0" />
+        <span>Subtotal: ____</span>
+      </div>
+
+      <!-- Add all other items the same way -->
+      <!-- For brevity, only a few more are shown -->
+
+      <div class="product">
+        <label>Tomatoes (10 sh/piece)</label>
+        <input type="number" name="tomatoes" placeholder="Enter pieces" min="0" />
+        <span>Subtotal: ____</span>
+      </div>
+
+      <div class="product">
+        <label>Onions (5 sh/piece)</label>
+        <input type="number" name="onions" placeholder="Enter pieces" min="0" />
+        <span>Subtotal: ____</span>
+      </div>
+
+      <div class="product">
+        <label>Ginger (120 sh/kg)</label>
+        <input type="number" name="ginger" placeholder="Enter kg" min="0" />
+        <span>Subtotal: ____</span>
+      </div>
+
+      <div class="product">
+        <label>Garlic (20 sh/piece)</label>
+        <input type="number" name="garlic" placeholder="Enter pieces" min="0" />
+        <span>Subtotal: ____</span>
+      </div>
+
+      <!-- Final Cart Summary -->
+      <section class="cart-summary">
+        <h3>Your Cart</h3>
+        <textarea placeholder="List what you ordered, e.g. 2kg carrots, 3 tomatoes"></textarea>
+        <label>Total Amount (fill manually):</label>
+        <input type="text" placeholder="e.g. 1230 sh" />
+        <p>Select Payment Method:</p>
+        <label><input type="radio" name="payment" /> Cash</label><br />
+        <label><input type="radio" name="payment" /> M-Pesa</label>
+        <br><br>
+        <button type="submit">Place Order</button>
+      </section>
+
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Fruits & Vegetables Wholesaler</p>
+  </footer>
+
+</body>
+</html>
