@@ -9,9 +9,9 @@ $password = $_POST['password'];
 $conn = new mysqli('localhost', 'root', '', 'sign_up');
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-    else {
+ } else {
         // Prepare and bind
-        $stmt = $conn->prepare("INSERT INTO sign_up (firstName, lastName, email, phoneNumber, idNumber, password) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO sign up (firstName, lastName, email, phoneNumber, idNumber, password) VALUES (?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("ssssss", $firstName, $lastName, $email, $phoneNumber, $idNumber, $password);
 
         // Execute the statement
@@ -25,5 +25,4 @@ if ($conn->connect_error) {
         $stmt->close();
         $conn->close();
     }
-}
 ?>
