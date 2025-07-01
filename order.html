@@ -11,83 +11,77 @@
   <header class="navbar">
     <div class="logo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Mango_icon.png" alt="Mango Logo">
-      <button><a href="dashboard.html" class="btn">Home</a></button>
-       <button><a href="order.html" class="btn">Place Order</a></button>
-      <a href="wholesaler.html" class="btn">Wholesaler Dashboard</a></button>
+      
       <span>FruVeg Website</span>
     </div>
     <div class="auth-links">
       <a href="dashboard.html" class="btn">Home</a>
-      <a href="signin.html" class="btn">Sign In</a>
+     <a href="wholesaler.html" class="btn">Wholesaler Dashboard</a></button>
     </div>
   </header>
 
   <main class="form-container">
     <h2>Place Your Order</h2>
 
-    <form action="submit_order.php" method="post">
-
+    <form id="orderForm">
       <label for="customerName">Customer Name:</label>
       <input type="text" id="customerName" name="customerName" required>
 
-      <label for="item">Select Item:</label>
-      <select id="item" name="item" required>
-        <option value="">--Choose an item--</option>
-        <option value="Mango">Mango</option>
-        <option value="Banana">Banana</option>
-        <option value="Tomato">Tomato</option>
-        <option value="Carrot">Carrot</option>
-        <option value="Spinach">Spinach</option>
-      </select>
+      <label for="phoneNumber">Phone Number:</label>
+      <input type="text" id="phoneNumber" name="phoneNumber" required>
 
-      <label for="quantity">Quantity (kg):</label>
-      <input type="number" id="quantity" name="quantity" min="1" required>
+      <label for="itemQuantity">Item and Quantity:</label>
+      <input type="text" id="itemQuantity" name="itemQuantity" placeholder="e.g., Mango - 2kg" required>
 
-      <label for="wholesaler">Select Wholesaler:</label>
-      <select id="wholesaler" name="wholesaler" required>
-        <option value="">--Choose a wholesaler--</option>
-        <option value="Green Harvest">Green Harvest</option>
-        <option value="Fresh Farm">Fresh Farm</option>
-        <option value="Veggie King">Veggie King</option>
-      </select>
+      <label for="wholesaler">Wholesaler Name:</label>
+      <input type="text" id="wholesaler" name="wholesaler" required>
 
-      <label for="payment">Select Payment Method:</label>
+      <label for="payment">Payment Method:</label>
       <select id="payment" name="payment" required>
         <option value="">--Choose payment method--</option>
         <option value="Cash on Delivery">Cash on Delivery</option>
         <option value="Mpesa">Mpesa</option>
       </select>
 
-      <h3>Delivery Agent Contact</h3>
-      <table class="delivery-table">
-        <thead>
-          <tr>
-            <th>Agent Name</th>
-            <th>Phone Number</th>
-            <th>Region</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>John Mwangi</td>
-            <td>+254 712 345 678</td>
-            <td>Nairobi</td>
-          </tr>
-          <tr>
-            <td>Aisha Ali</td>
-            <td>+254 700 111 222</td>
-            <td>Mombasa</td>
-          </tr>
-        </tbody>
-      </table>
-
       <div class="button-group">
         <button type="submit" class="btn btn-order">Submit Order</button>
         <button type="reset" class="btn btn-cancel">Cancel Order</button>
       </div>
-
     </form>
+
+    <section id="orderSummary" style="display: none; margin-top: 30px;">
+      <h3>Order Summary</h3>
+      <p><strong>Name:</strong> <span id="summaryName"></span></p>
+      <p><strong>Item & Quantity:</strong> <span id="summaryItem"></span></p>
+      <p><strong>Wholesaler:</strong> <span id="summaryWholesaler"></span></p>
+      <p><strong>Payment Method:</strong> <span id="summaryPayment"></span></p>
+      <button id="editOrder" class="btn">Edit Order</button>
+    </section>
+
   </main>
+
+  <script>
+    const form = document.getElementById('orderForm');
+    const summary = document.getElementById('orderSummary');
+    const editBtn = document.getElementById('editOrder');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      document.getElementById('summaryName').textContent = form.customerName.value;
+      document.getElementById('summaryItem').textContent = form.itemQuantity.value;
+      document.getElementById('summaryWholesaler').textContent = form.wholesaler.value;
+      document.getElementById('summaryPayment').textContent = form.payment.value;
+
+      form.style.display = 'none';
+      summary.style.display = 'block';
+    });
+
+    editBtn.addEventListener('click', function() {
+      summary.style.display = 'none';
+      form.style.display = 'block';
+    });
+  </script>
 
 </body>
 </html>
