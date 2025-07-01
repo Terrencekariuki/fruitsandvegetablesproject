@@ -22,23 +22,36 @@
   <main class="form-container">
     <h2>Sign Up</h2>
     <form action="signup.php" method="POST">
-      <label for="firstName">First Name</label>
-      <input type="text" id="firstName" name="firstName" required>
+  <label for="firstName">First Name</label>
+  <input type="text" id="firstName" name="firstName" required>
 
-      <label for="lastName">Last Name</label>
-      <input type="text" id="lastName" name="lastName" required>
+  <label for="lastName">Last Name</label>
+  <input type="text" id="lastName" name="lastName" required>
 
-      <label for="phoneNumber">Phone Number</label>
-      <input type="text" id="phoneNumber" name="phoneNumber" required>
+  <label for="phoneNumber">Phone Number</label>
+  <input type="text" id="phoneNumber" name="phoneNumber" required>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required>
 
-      <label for="idnumber">ID Number</label>
-      <input type="text" id="idNumber" name="idNumber" required>
+  <label for="idnumber">ID Number</label>
+  <input type="text" id="idNumber" name="idNumber" required>
 
-      <label for="password">Create Password</label>
-      <input type="password" id="password" name="password" required>
+  <label for="password">Create Password</label>
+  <input type="password" id="password" name="password" required>
+
+  <label for="role">Select Role:</label>
+  <select id="role" name="role" required>
+    <option value="">-- Choose Role --</option>
+    <option value="Customer">Customer</option>
+    <option value="Wholesaler">Wholesaler</option>
+  </select>
+
+  <input type="submit" value="Sign up">
+
+  <p>Already have an account? <a href="signin.html">Sign In</a></p>
+</form>
+
 
     <input type="submit" value="Sign up"> 
 
