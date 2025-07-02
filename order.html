@@ -23,7 +23,7 @@
   <main class="form-container">
     <h2>Place Your Order</h2>
 
-    <form id="orderForm">
+    <form id="orderForm" action="order.php" method="POST">
       <label for="customerName">Customer Name:</label>
       <input type="text" id="customerName" name="customerName" required>
 
@@ -64,7 +64,8 @@
     const form = document.getElementById('orderForm');
     const summary = document.getElementById('orderSummary');
     const editBtn = document.getElementById('editOrder');
-
+    const cancelBtn = document.getElementById('.btn-cancel');
+    const submitBtn = document.getElementById('.btn-order');
     form.addEventListener('submit', function(event) {
       event.preventDefault();
 
