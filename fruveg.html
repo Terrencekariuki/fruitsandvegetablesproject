@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Inventory</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ <header class="navbar">
+    <div class="logo">
+      <img src="images\mango.jpeg" alt="Mango Logo">
+      <span>FruVeg website</span>
+  <div class="container">
+    <h1>Fruits & Vegetables Inventory</h1>
+
+    <form action="fruveg.php" method="POST">
+      <table>
+        <thead>
+          <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Product Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" name="product_id[]" required></td>
+            <td><input type="text" name="product_name[]" required></td>
+            <td><input type="number" name="product_quantity[]" min="0" required></td>
+          </tr>
+          <tr>
+            <td><input type="text" name="product_id[]" required></td>
+            <td><input type="text" name="product_name[]" required></td>
+            <td><input type="number" name="product_quantity[]" min="0" required></td>
+          </tr>
+          <!-- Add more rows as needed -->
+        </tbody>
+      </table>
+
+      <button type="submit">Save to Database</button>
+    </form>
+  </div>
+
+</body>
+</html>

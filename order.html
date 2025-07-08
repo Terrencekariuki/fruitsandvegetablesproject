@@ -10,13 +10,13 @@
 
   <header class="navbar">
     <div class="logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Mango_icon.png" alt="Mango Logo">
+      <img src="images/mango.jpeg" alt="Mango Logo">
       
       <span>FruVeg Website</span>
     </div>
     <div class="auth-links">
       <a href="dashboard.html" class="btn">Home</a>
-     <a href="wholesaler.html" class="btn">Wholesaler Dashboard</a></button>
+     <a href="wholesaler.php" class="btn">Wholesaler Dashboard</a></button>
     </div>
   </header>
 
@@ -56,6 +56,8 @@
       <p><strong>Wholesaler:</strong> <span id="summaryWholesaler"></span></p>
       <p><strong>Payment Method:</strong> <span id="summaryPayment"></span></p>
       <button id="editOrder" class="btn">Edit Order</button>
+      <button id="btn btn-cancel" onclick="window.location.href='dashboard.html'">Cancel Order</button>
+      <button id="btn btn-order" onclick="window.location.href='wholesaler.php'">Place Order</button>
     </section>
 
   </main>
